@@ -69,16 +69,34 @@
   transform: scale(1.2);
 }
 
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .hero-title {
-  font-family: "Roobert TRIAL", sans-serif;
-  font-weight: 300;
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 200;
   font-size: 90px;
   line-height: 120px;
-  letter-spacing: -7%;
+  letter-spacing: -0.05em;
   text-align: center;
   margin: 0;
   display: block;
   margin-top: -350px;
+  text-transform: uppercase;
+  animation: fade-in-out 3s ease-in-out infinite;
+  will-change: opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 .hero-title:first-of-type {
@@ -90,21 +108,11 @@
 }
 
 .hero-titles-container {
-  cursor: pointer;
+  cursor: default;
 }
 
 .hero-title-hover {
-  transition: letter-spacing 0.3s ease;
-}
-
-.hero-titles-container:hover .hero-title-hover {
-  animation: float 3s ease-in-out infinite;
-  letter-spacing: -5%;
-}
-
-.hero-title-hover:hover {
-  animation: float 3s ease-in-out infinite;
-  letter-spacing: -5%;
+  /* No hover effects */
 }
 
 @keyframes circle-fill {
@@ -120,4 +128,86 @@
 
 .circle-progress-stroke {
   animation: circle-fill 1.2s ease-out forwards;
+}
+
+@keyframes box-spin-clockwise {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes box-spin-counterclockwise {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(-315deg);
+  }
+}
+
+@keyframes arrow-counter-rotate-clockwise {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(-405deg);
+  }
+}
+
+@keyframes arrow-counter-rotate-counterclockwise {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(315deg);
+  }
+}
+
+.button-box-spin-clockwise {
+  transform: rotate(45deg);
+}
+
+.group:hover .button-box-spin-clockwise {
+  animation: box-spin-clockwise 1s linear infinite;
+}
+
+.button-box-spin-counterclockwise {
+  transform: rotate(45deg);
+}
+
+.group:hover .button-box-spin-counterclockwise {
+  animation: box-spin-counterclockwise 1s linear infinite;
+}
+
+.button-arrow-static {
+  transform: rotate(0deg) !important;
+  animation: none !important;
+}
+
+.button-arrow-left {
+  transform: rotate(0deg) !important;
+  animation: none !important;
+}
+
+.button-arrow-right {
+  transform: rotate(0deg) !important;
+  animation: none !important;
+}
+
+.group:hover .button-box-spin-clockwise {
+  animation: box-spin-clockwise 1s linear infinite;
+}
+
+.group:hover .button-box-spin-counterclockwise {
+  animation: box-spin-counterclockwise 1s linear infinite;
+}
+
+.group:hover .button-arrow-static,
+.group:hover .button-arrow-left,
+.group:hover .button-arrow-right {
+  transform: rotate(0deg) !important;
+  animation: none !important;
 }

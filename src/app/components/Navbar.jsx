@@ -9,7 +9,6 @@ export default function Navbar() {
             </a>
           </li>
           <li className="ml-4">[ INTRO ]</li>
-          <li className="ml-auto bg-black text-white p-2">Enter Code</li>
         </ul>
       </nav>
     </div>

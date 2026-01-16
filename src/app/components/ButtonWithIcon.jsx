@@ -10,8 +10,8 @@ export default function ButtonWithIcon({
     <>
       {direction === "left" && (
         <div className="relative w-[44px] h-[44px] flex-shrink-0">
-          <div className="absolute inset-0 border border-[#1A1B1C] rotate-45 transition-transform duration-300 group-hover:scale-[1.1]"></div>
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 border border-[#1A1B1C] button-box-spin-counterclockwise"></div>
+          <div className="absolute inset-0 flex items-center justify-center button-arrow-left">
             <svg
               viewBox="0 0 10 10"
               className="w-[10px] h-[10px] fill-[#1A1B1C]"
@@ -28,8 +28,8 @@ export default function ButtonWithIcon({
 
       {direction === "right" && (
         <div className="relative w-[44px] h-[44px] flex-shrink-0">
-          <div className="absolute inset-0 border border-[#1A1B1C] rotate-45 transition-transform duration-300 group-hover:scale-[1.1]"></div>
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 border border-[#1A1B1C] button-box-spin-clockwise"></div>
+          <div className="absolute inset-0 flex items-center justify-center button-arrow-right">
             <svg
               viewBox="0 0 10 10"
               className="w-[10px] h-[10px] fill-[#1A1B1C]"

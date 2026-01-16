@@ -90,18 +90,6 @@ export default function Home() {
         </div>
 
         <div
-          className={`absolute w-[500px] h-[500px] left-[-301px] top-[188px] border-dashed border-2 rotate-45 border-[#A0A4AB] transition-opacity duration-300 ${
-            hoveredButton === "right" ? "opacity-0" : "opacity-100"
-          }`}
-        ></div>
-
-        <div
-          className={`absolute w-[500px] h-[500px] right-[-301px] top-[188px] border-dashed border-2 rotate-45 border-[#A0A4AB] transition-opacity duration-300 ${
-            hoveredButton === "left" ? "opacity-0" : "opacity-100"
-          }`}
-        ></div>
-
-        <div
           className={`flex flex-col items-center justify-center h-[calc(100vh-72px)] transition-transform duration-500 ease-out ${
             hoveredButton === "left"
               ? "translate-x-[200px]"
